@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moj Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+<body>
+    <header>
+        <h1>Dobrodošli u moj portfolio</h1>
+        <p>Ovo su moji radovi iz web programiranja</p>
+    </header>
+
+    <main>
+        <section class="projects">
+            <div class="project-card" onclick="toggleDetails(this)">
+                <a href="/projekti/4.html" class="project-card">
+                    <h2>Monopol sistem 4</h2>
+                    <p>Klikni da otvoriš lokalni projekat</p>
+                </a>
+            </div>
+
+            <div class="project-card" onclick="toggleDetails(this)">
+                <h2>Galerija Slika</h2>
+                <p class="details">Interaktivna galerija sa mogućnošću zumiranja slika.</p>
+            </div>
+
+            <div class="project-card" onclick="toggleDetails(this)">
+                <h2>Todo Lista</h2>
+                <p class="details">Lista zadataka sa lokalnim čuvanjem podataka pomoću LocalStorage-a.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mihajlo Postic</p>
+        <div class="social-icons">
+            <a href="https://instagram.com/tvojprofil" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com/tvojprofil" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/tvojprofil" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    
+
+    <script src="portfolio.js"></script>
+</body>
+</html>
