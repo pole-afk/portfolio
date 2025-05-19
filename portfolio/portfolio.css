@@ -1,88 +1,161 @@
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
-  margin: 0;
-  padding: 0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding-top: 56px; /* Offset for fixed navbar */
 }
 
-header {
-  background-color: #b42e17;
-  color: white;
-  padding: 3rem 1rem;
-  text-align: center;
+/* Header Styles */
+.header {
+    background-color: #343a40;
+    color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
+/* Profile Picture */
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+.skills-progress {
+    height: 25px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+/* Project Cards */
 .project-card {
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.3s ease;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-card:hover {
-  transform: scale(1.02);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-footer {
-  background-color: #222;
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
+/* Section Dividers */
+.divider {
+    height: 1px;
+    background-color: #dee2e6;
+    margin: 4rem 0;
+    opacity: 0.5;
 }
 
+/* Contact Section */
+.contact-info {
+    background-color: #f1f1f1;
+    padding: 2rem;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.contact-info p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Social Icons */
 .social-icons a {
-  color: white;
-  margin: 0 10px;
-  font-size: 1.5rem;
-  transition: color 0.3s;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
 }
 
 .social-icons a:hover {
-  color: #b42e17;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
 }
 
-a {
-  text-decoration: none;
-}
-.skill-circle {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: conic-gradient(#b42e17 calc(var(--percent, 0) * 1%), #ddd 0);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  font-size: 1.5rem;
-  color: #333;
-  transition: background 1s ease;
-}
-
-.skill-circle i {
-  font-size: 2rem;
-  margin-bottom: 0.25rem;
-}
-
-.skill-circle .percent {
-  position: absolute;
-  font-size: 1rem;
-  font-weight: bold;
-  bottom: 10px;
-}
-
-.skill-circle p {
-  margin-top: 1rem;
-  font-weight: 500;
-}
-.skill-circle:hover
-{   
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .header {
+        padding: 5rem 0 3rem;
+    }
     
-    background-color:#b42e17 ;
+    .profile-picture img {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .main-content {
+        padding: 0 15px;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Active Nav Link */
+.navbar-nav .nav-link.active {
+    color: #0d6efd !important;
+    font-weight: 500;
+}
+/* Dark mode specific adjustments */
+.dark body {
+    background-color: #121212; /* Tamnija pozadina */
+    color: #f8f8f2; /* Svetliji tekst */
+}
+
+.dark .navbar {
+    background-color: #1e1e1e; /* Tamnija pozadina navbar-a */
+}
+
+.dark .header {
+    background-color: #282a36; /* Tamnija pozadina header-a */
+    color: #f8f8f2;
+}
+
+.dark .project-card {
+    border: 1px solid #444; /* Tamnija ivica kartice */
+    background-color: #282a36; /* Tamnija pozadina kartice */
+    color: #f8f8f2;
+}
+
+.dark .form-control {
+    background-color: #333; /* Tamnija pozadina forme */
+    color: #fff; /* Svetliji tekst u formi */
+    border-color: #555; /* Tamnija ivica forme */
+}
+
+.dark .form-control:focus {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); /* Zadržavamo boju fokusa */
+}
+
+.dark .progress {
+    background-color: #333; /* Tamnija pozadina progress bara */
+}
+
+.dark .divider {
+    background-color: #444; /* Tamnija linija */
+}
+
+/* Ikonice za temu */
+#theme-toggle i {
+    color: #fff; /* Osnovna boja ikonice */
 }
